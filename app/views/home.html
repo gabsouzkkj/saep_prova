@@ -1,0 +1,58 @@
+<div class="homePage">
+    <header class="homePage_header">
+        {% for professor in professores %}
+        <a href="?pagina=home"><p><span>Prof. </span>{{professor.nome}}</p></a>
+        {% endfor %}
+        <a style=" text-decoration: none;" href="?pagina=home&metodo=logout">Sair</a>
+    </header>
+    <main class="homePage_content">
+        <div class="homePage_content_cadastroTurma">
+            <a href="#" onclick="openModal()">CADASTRAR TURMA</a>
+        </div>
+        <div class="modal" id="myModal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <div class="cadastroPage_form">
+                    <h1>Cadastre uma turma</h1>
+                    <form autocomplete="off" action="?pagina=home&metodo=insertTurma" method="post">
+                        <input type="text" placeholder="Nome" name="nomeDaTurma" required>
+                        <button type="submit">CADASTRAR</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="homePage_content_turmas">
+            <h2>Turmas🎒</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th class="teste">Número</th>
+                        <th>Nome</th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for turma in turmas %}
+                    <tr>
+                        <td class="idTurma"></td>
+                        <td>{{turma.nome}}</td>
+                        <td><button class="buttonExcluir" onclick="redirectButtonExcluir('{{turma.nome}}')">Excluir</button>
+                            <button class="buttonVisualizar" onclick="redirectButtonVisualizar('{{turma.nome}}')">Visualizar</button>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </main>
+</div>
+
+<script>
+    function openModal() {
+        document.getElementById("myModal").style.display = "block";
+    }
+
+    function closeModal() {
+        document.getElementById("myModal").style.display = "none";
+    }
+</script>

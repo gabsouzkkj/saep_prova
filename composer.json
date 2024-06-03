@@ -1,0 +1,18 @@
+{
+    "name": "idev1/saep_prova",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Idev1\\SaepProva\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Gabriel Philippe"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "twig/twig": "^3.10"
+    }
+}

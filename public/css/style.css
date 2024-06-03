@@ -1,0 +1,410 @@
+/* DEFINIÇÃO GLOBAL */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto";
+}
+
+/* PAGINA DE LOGIN */
+.loginPage{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:#4814a4;
+}
+/* PAGINA DE LOGIN - h1 do bem vindo */
+.loginPage_form .bemvindo{
+    text-align: left;
+    font-size: 38px;
+    padding-left: 10px;
+    margin-bottom: 9px;
+}
+/* PAGINA DE LOGIN - h1 do bem vindo */
+.loginPage_form .label{
+    text-align: left;
+    padding-left: 10px;
+    font-weight: 420;
+}
+/* PAGINA DE LOGIN - p do form */
+.loginPage_form .parag {
+    text-align: left;
+    font-size: 18px;
+    padding-left: 10px;
+    padding-bottom: 6px;
+    margin-bottom: 34px;
+}
+/* PAGINA DE LOGIN - div do formulário */
+.loginPage_form{
+    text-align: center;
+    padding: 51px 40px;
+    color: #535353;
+    background: white;
+    border-radius: 7px;
+    box-shadow: 0px 0px 20px 1px #00000057;
+}
+/* PAGINA DE LOGIN - formulário */
+.loginPage_form form{
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+}
+/* PAGINA DE LOGIN - input */
+.loginPage_form form input{
+    padding: 17px 26px;
+    border-radius: 7px;
+    margin: 10px;
+    border: 1px solid #0000002b;
+    font-size: 17px;
+    width: 25rem;
+}
+/* PAGINA DE LOGIN - remoção da seleção do input */
+.loginPage_form form input:focus {
+    outline: none;
+}
+/* PAGINA DE LOGIN - botão */
+.loginPage_form form button{
+    background-color: #e83c84;
+    color: white;
+    border: none;
+    padding: 14px 71px;
+    border-radius: 7px;
+    font-size: 17px;
+    font-weight: 500;
+    margin-top: 22px;
+    cursor: pointer;
+    transition: all 250ms ease;
+}
+.loginPage_form form button:hover{
+    background-color: #fa046a;
+}
+
+/* PAGINA INICIAL */
+/* PAGINA INICIAL - header*/
+.homePage_header{
+    background-color: #4814a4;
+    display: flex;
+    font-size: 19px;
+    text-transform: uppercase;
+    justify-content: space-between;
+    padding: 25px 40px;
+    color: white;
+}
+/* PAGINA INICIAL - texto prof */
+.homePage_header p span{
+    text-transform: uppercase ;
+}
+/* PAGINA INICIAL - link*/
+.homePage_header a{
+    color: white;
+    text-decoration: none;
+}
+.homePage_header a:hover{
+    text-decoration: none;
+}
+/* PAGINA INICIAL - main*/
+.homePage_content{
+    padding: 40px;
+}
+/* PAGINA INICIAL - cadastro de turmas*/
+.homePage_content_cadastroTurma{
+    display: flex;
+    justify-content: end;
+    width: 100%;
+}
+/* PAGINA INICIAL - botão de cadastro de turmas*/
+.homePage_content_cadastroTurma a{
+    color: white;
+    text-decoration: none;
+    background-color: #4814a4;
+    padding: 10px 25px;
+    font-weight: 500;
+    border-radius: 7px;
+    transition: all 250ms ease;
+}
+.homePage_content_cadastroTurma a:hover{
+    background-color: #5f03ff;
+}
+
+.homePage_content_turmas .teste{
+    text-align: center;
+}
+.turmaPage_header a {
+    text-decoration: none;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%;
+    border-radius: 46px;
+  }
+  
+/* PAGINA INICIAL - tabela de turmas*/
+.homePage_content_turmas table {
+    margin-top: 20px;
+    padding: 15px;
+    border-collapse: collapse;
+    border-width: 10px;
+    line-height: 1.5;
+    width: 60%;
+    border-left: 4px solid #e83c84;
+    box-shadow: 0px 0px 20px 1px #0000001c;
+}
+.homePage_content_turmas h2 {
+    font-size: 30px;
+    color: #535353;
+}
+/* PAGINA INICIAL - linhas da tabela*/
+.homePage_content_turmas table th, .homePage_content_turmas table td {
+    border-top: 1px solid #00000021;
+    padding: 5px 25px;
+}
+.homePage_content_turmas table tr th {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 450;
+    color: white;
+    background-color: #e83c84;
+}
+.homePage_content_turmas table tbody tr{
+    border-top: none;
+}
+.homePage_content_turmas .idTurma{
+    margin-top: 10rem;
+}
+.homePage_content_turmas table th{
+    text-align: left;
+    padding-top: 16px;
+    padding-bottom: 10px;
+}
+.homePage_content_turmas table td:first-child{
+    text-align: center;
+    padding: 14px;
+}
+/* PAGINA INICIAL - botões da tabela*/
+.homePage_content_turmas table td button{
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    transition: all 250ms ease;
+    border-radius: 7px;
+}
+.homePage_content_turmas table td .buttonExcluir{
+    color: white;
+    background-color: #FC7E7C;
+    margin-right: 10px;
+    font-weight: 500;
+    padding: 10px 10px 10px 10px;
+    text-transform: uppercase;
+}
+.homePage_content_turmas table td .buttonExcluir:hover{
+    background-color: #ff4946;
+}
+.homePage_content_turmas table td .buttonVisualizar{
+    color: white;
+    background-color: #00DC9B;
+    padding: 10px 10px 10px 10px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.homePage_content_turmas table td .buttonVisualizar:hover{
+    background-color: #00ffb3;
+}
+
+
+/* PAGINA TURMA */
+/* PAGINA TURMA - header*/
+.turmaPage_header{
+    background-color: #4814a4;
+    display: flex;
+    font-size: 19px;
+    text-transform: uppercase;
+    justify-content: space-between;
+    padding: 25px 40px;
+    color: white;
+}
+/* PAGINA TURMA - link*/
+.turmaPage_header a{
+    color: white;
+    text-decoration: none;
+}
+.turmaPage_header a:hover{
+    text-decoration: underline;
+}
+/* PAGINA TURMA - main*/
+.turmaPage_content{
+    padding: 40px;
+}
+/* PAGINA TURMA - cadastro de turmas*/
+.turmaPage_content_cadastroTurma{
+    display: flex;
+    justify-content: end;
+    width: 100%;
+}
+/* PAGINA TURMA - botão de cadastro de turmas*/
+.turmaPage_content_cadastroTurma a{
+    color: white;
+    text-decoration: none;
+    background-color: #4814a4;
+    padding: 10px 25px;
+    font-weight: 500;
+    border-radius: 7px;
+    text-transform: uppercase;
+    transition: all 250ms ease;
+}
+.turmaPage_content_cadastroTurma a:hover{
+    background-color: #5f03ff;
+}
+
+/* PAGINA TURMA - tabela de turmas*/
+.turmaPage_content_turmas table {
+    margin-top: 20px;
+    padding: 15px;
+    border-collapse: collapse;
+    border-width: 10px;
+    line-height: 1.5;
+    width: 60%;
+    border-left: 4px solid #e83c84;
+    box-shadow: 0px 0px 20px 1px #0000001c;
+}
+
+.turmaPage_content_turmas .teste {
+    font-size: 30px;
+    color: #535353;
+}
+
+/* PAGINA TURMA - linhas da tabela*/
+.turmaPage_content_turmas table th, .turmaPage_content_turmas table td {
+    border-top: 1px solid #00000021;
+    padding: 5px 25px;
+}
+.turmaPage_content_turmas table tr th {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 450;
+    color: white;
+    background-color: #e83c84;
+}
+.turmaPage_content_turmas table tbody tr{
+    border-top: none;
+}
+.turmaPage_content_turmas .idTurma{
+    margin-top: 10rem;
+}
+.turmaPage_content_turmas table th{
+    text-align: left;
+    padding-top: 16px;
+    padding-bottom: 10px;
+}
+.turmaPage_content_turmas table td:first-child{
+    text-align: center;
+    padding: 14px;
+}
+/* PAGINA TURMA - botões da tabela*/
+.turmaPage_content_turmas table td button{
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    transition: all 250ms ease;
+}
+.turmaPage_content_turmas table td .buttonExcluir{
+    color: white;
+    background-color: #FC7E7C;
+    margin-right: 10px;
+}
+.turmaPage_content_turmas table td .buttonExcluir:hover{
+    background-color: #ff4946;
+}
+.turmaPage_content_turmas table td .buttonVisualizar{
+    color: black;
+    background-color: #00DC9B;
+}
+.turmaPage_content_turmas table td .buttonVisualizar:hover{
+    background-color: #00ffb3;
+}
+
+
+/* PAGINA DE CADASTRO */
+.cadastroPage{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 31px;
+}
+/* PAGINA DE CADASTRO - div do formulário */
+.cadastroPage_form {
+    text-align: center;
+    border: none;
+    padding: 60px 0px;
+    color: #535353; 
+}
+/* PAGINA DE CADASTRO - formulário */
+.cadastroPage_form form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+}
+/* PAGINA DE CADASTRO - input */
+.cadastroPage_form form input, .cadastroPage_form form select{
+    padding: 17px 26px;
+    border-radius: 7px;
+    margin: 10px;
+    border: 1px solid #0000002b;
+    font-size: 17px;
+    width: 25rem;
+    color: #626262;
+    outline: none;
+}
+/* PAGINA DE CADASTRO - botão */
+.cadastroPage_form form button{
+    background-color: #e83c84;
+    color: white;
+    border: none;
+    padding: 14px 71px;
+    border-radius: 7px;
+    font-size: 17px;
+    font-weight: 500;
+    margin-top: 22px;
+    cursor: pointer;
+    transition: all 250ms ease;
+}
+.cadastroPage_form form button:hover{
+    background-color: #fa046a;
+
+}
+
+/* MODAL - CAIXA DE CADASTRAR TURMA */
+.close {
+    color: #e83c84;
+    float: right;
+    font-size: 28px;
+    font-weight: 500;
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+.turmaPage_header {
+    text-decoration: none;
+}
+
+.turmaPage_content_turmas .teste2{
+    text-align: center;
+}

@@ -1,0 +1,73 @@
+<div class="turmaPage">
+    <header class="turmaPage_header">
+        {% for professor in professores %}
+        <a style=" text-decoration: none;" href="?pagina=home">
+            <p><span>Prof. </span>{{professor.nome}}</p>
+        </a>
+        {% endfor %}
+        <a style=" text-decoration: none;" href="?pagina=home&metodo=logout">Sair</a>
+    </header>
+    <main class="turmaPage_content">
+        <div class="turmaPage_content_cadastroTurma">
+            <a href="#" onclick="openModal()">CADASTRAR ATIVIDADE</a>
+        </div>
+        <div class="modal" id="myModal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <div class="cadastroPage">
+                    <div class="cadastroPage_form">
+                        <h1>Cadastre uma atividade</h1>
+                        <form autocomplete="off" action="?pagina=turma&metodo=insertAtividade" method="post">
+                            <input type="text" placeholder="Título" name="titulo" required>
+                            <select name="turma">
+                                <option value="-">Selecione a turma da atividade</option>
+                                {% for turma in turmas %}
+                                <option value="{{turma.nome}}">{{turma.nome}}</option>
+                                {% endfor %}
+                            </select>
+                            <button type="submit">CADASTRAR</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="turmaPage_content_turmas">
+            {% for atividade in atividades %}
+            {% if loop.first %}
+            <h1 class="teste">Turma: {{atividade.turma}}</h1>
+            {% endif %}
+            {% endfor %}
+            <table>
+                <thead>
+                    <tr>
+                        <th class="teste2">Número</th>
+                        <th>Nome</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% if atividades is empty %}
+                    <tr>
+                        <td colspan="2">Nenhuma atividade cadastrada</td>
+                    </tr>
+                    {% else %}
+                    {% for atividade in atividades %}
+                    <tr>
+                        <td class="idAtividade"></td>
+                        <td>{{ atividade.titulo }}</td>
+                    </tr>
+                    {% endfor %}
+                    {% endif %}
+                </tbody>
+            </table>
+        </div>
+    </main>
+</div>
+<script>
+    function openModal() {
+        document.getElementById("myModal").style.display = "block";
+    }
+
+    function closeModal() {
+        document.getElementById("myModal").style.display = "none";
+    }
+</script>
