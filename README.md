@@ -4,9 +4,7 @@
 Prova exclusivo o, promovido pelo SENAI para o Ensino Técnico de Desenvolvimento de Sistemas.
 </p>
 
-<p align="center">
-  <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=49AA26&labelColor=000000">
-</p>
+!image(https://media.discordapp.net/attachments/916714026019479622/1247165209206853723/image.png?ex=665f089d&is=665db71d&hm=97dbd66e844a444f3ed588de05c1f341d7525f5f67ece094cbd5cb92407d14b5&=&format=webp&quality=lossless&width=1248&height=592)
 
 <br>
 
